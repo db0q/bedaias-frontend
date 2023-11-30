@@ -1,0 +1,53 @@
+/* Profile Detail Page Styles */
+
+.profile-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+   
+  }
+  
+  .profile-card {
+    border-radius: 8px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .profile-dan {
+    color: #666;
+  }
+  
+  .profile-details {
+    margin-bottom: 16px;
+  }
+  
+  .profile-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+
+  
+  .profile-description-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .profile-industries {
+    font-size: 14px;
+    color: #666;
+  }
+  
