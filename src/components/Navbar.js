@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import logo from '../assets/logo.svg'
+import logo from '../assets/logob.png'
 
 function NavBar() {
   const expand = "lg"; 
@@ -48,7 +48,7 @@ function NavBar() {
               <li>
                 <a
                   href="/"
-                  className="text-gray-700 text-base font-medium hover:text-blue-500"
+                  className="text-gray-700 text-right text-base font-medium hover:text-blue-500"
                   aria-current="page"
                 >
                   الصفحة الرائيسية
@@ -57,7 +57,7 @@ function NavBar() {
               <li>
                 <a
                   href="/Nukhba"
-                  className="text-gray-700 text-base font-medium hover:text-blue-500"
+                  className="text-gray-700 text-right text-base font-medium hover:text-blue-500"
                 >
                   رابطة النخبة
                 </a>

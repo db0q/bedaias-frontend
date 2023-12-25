@@ -10,7 +10,7 @@ import Main from './MainAbout.js';
 import Sidebar from './Sidebar';
 import Footer from '../../components/Footer';
 import NavBar from '../../components/Navbar';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logob.png'
 import SocialButton from '../../components/SocialButton';
 import ScrollToTopButton from '../../components/ScrollToTop';
 const mainFeaturedPost = {
