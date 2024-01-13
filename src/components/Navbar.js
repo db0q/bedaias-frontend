@@ -51,7 +51,7 @@ function NavBar() {
                   className="text-gray-700 text-right text-base font-medium hover:text-blue-500"
                   aria-current="page"
                 >
-                  الصفحة الرائيسية
+                  الصفحة الرئيسية
                 </a>
               </li>
               <li>
@@ -65,7 +65,7 @@ function NavBar() {
               <li>
                 <a
                   href="/Orgs"
-                  className="text-gray-700 text-sm font-medium hover:text-blue-500"
+                  className="text-gray-700 text-right text-sm font-medium hover:text-blue-500"
                 >
                   المنظمات  العاملة المحيطة
                 </a>

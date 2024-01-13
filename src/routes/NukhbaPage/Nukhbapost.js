@@ -52,11 +52,9 @@ const Nukhbapost = () => {
       <Navbar />
       <div className="mt-16 pt-4">
         <div className={styles.destnation}>
-          <h1>{profileInfo.title}</h1>
-          <p></p>
           <DestnationData
             cName={styles.firstDes}
-            heading=""
+            heading={profileInfo.title}
             text={profileInfo.firstdiscription}
             img1={profileInfo.firstpic}
             img2={profileInfo.secondpic}
@@ -68,12 +66,14 @@ const Nukhbapost = () => {
             img1={profileInfo.thirdpic}
             img2={profileInfo.forthpic}
           />
-          <div class="flex items-center justify-center h-screen">
-            <video class="max-w-full max-h-full" controls>
-              <source src={profileInfo.video_file} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          {profileInfo.video_file && (
+             <div class="flex items-center justify-center h-screen">
+        <video className="max-w-full max-h-full" controls>
+          <source src={profileInfo.video_file} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        </div>
+      )}
         </div>
         <Typography
           variant="body2"

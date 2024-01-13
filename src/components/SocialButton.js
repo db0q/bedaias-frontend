@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
-import { FaRegCommentAlt  } from 'react-icons/fa';
+import { FaRegCommentAlt } from 'react-icons/fa';
 import { BsWhatsapp } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 
 const SocialButton = () => {
   const [showButtons, setShowButtons] = useState(false);
   const [hoveredButton, setHoveredButton] = useState(null);
-  
+
   const handleEmailClick = () => {
     const mailtoLink = `mailto:Eya.org@yahoo.com`;
-  window.location.href = mailtoLink;
-    };
-    const handleWhatsappClick = () => {
-      // Replace phoneNumber with the desired phone number
-      const phoneNumber = '+9647709454916';
-  
-      // Create the WhatsApp link
-      const whatsappLink = `https://wa.me/${phoneNumber}`;
-  
-      // Open WhatsApp in a new tab
-      window.open(whatsappLink, '_blank');
-    };
+    window.location.href = mailtoLink;
+  };
+
+  const handleWhatsappClick = () => {
+    // Replace phoneNumber with the desired phone number
+    const phoneNumber = '+9647709454916';
+
+    // Create the WhatsApp link
+    const whatsappLink = `https://wa.me/${phoneNumber}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappLink, '_blank');
+  };
+
   let timeout;
 
   const handleMouseEnter = () => {
@@ -42,11 +44,11 @@ const SocialButton = () => {
   const renderMessage = () => {
     switch (hoveredButton) {
       case 'email':
-        return 'Send an Email';
+        return 'إرسال بريد إلكتروني';
       case 'whatsapp':
-        return 'Send a WhatsApp Message';
+        return 'إرسال رسالة WhatsApp';
       case 'social':
-        return 'Let\'s Talk';
+        return 'لنتحدث';
       default:
         return '';
     }
@@ -73,14 +75,15 @@ const SocialButton = () => {
           height: '45px',
           textAlign: 'center',
           fontSize: '20px',
-          zIndex:'999',
+          zIndex: '999',
         }}
       >
-        <FaRegCommentAlt className='text-orange-500'/>
+        <FaRegCommentAlt className='text-orange-500' />
       </div>
 
       {showButtons && (
-        <div id='social'
+        <div
+          id='social'
           className="social-buttons"
           style={{
             position: 'fixed',
@@ -89,29 +92,29 @@ const SocialButton = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: '10px',
-            zIndex:'999',
+            zIndex: '999',
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          
+
           <button
-           onClick={handleEmailClick}
+            onClick={handleEmailClick}
             onMouseEnter={() => handleButtonHover('email')}
             onMouseLeave={() => handleButtonHover(null)}
           >
-            <HiOutlineMail className='bg-gray-100 rounded-lg w-12 h-12 hover:text-orange-400'/>
+            <HiOutlineMail className='bg-gray-100 rounded-lg w-12 h-12 hover:text-orange-400' />
           </button>
-          
-          
+
+
           <button
-          onClick={handleWhatsappClick}
+            onClick={handleWhatsappClick}
             onMouseEnter={() => handleButtonHover('whatsapp')}
             onMouseLeave={() => handleButtonHover(null)}
           >
-            <BsWhatsapp className='bg-gray-100 rounded-lg w-12 h-12 hover:text-orange-400'/>
+            <BsWhatsapp className='bg-gray-100 rounded-lg w-12 h-12 hover:text-orange-400' />
           </button>
-          
+
         </div>
       )}
 
@@ -120,10 +123,10 @@ const SocialButton = () => {
         style={{
           position: 'fixed',
           bottom: '210px',
-          height:'30px',
-          backgroundColor:'gray',
+          height: '30px',
+          backgroundColor: 'gray',
           right: '120px',
-          color:'white',
+          color: 'white',
           borderRadius: '8px',
         }}
       >
