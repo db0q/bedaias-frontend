@@ -38,7 +38,7 @@ export default function Nukhba() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://bedaia.xyz/api/nukhba");
+        const response = await fetch(`https://bedaia.xyz/api/nukhba`);
         const data = await response.json();
 
         setFeaturedPosts(data);

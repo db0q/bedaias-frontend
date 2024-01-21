@@ -5,7 +5,7 @@ import Orgs from './routes/Orgs';
 import About from './routes/AboutUs/AboutUs';
 import Nukhba from './routes/NukhbaPage/Nukhba';
 import Nukhbapost from './routes/NukhbaPage/Nukhbapost';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const App = () => {
 
   return (
