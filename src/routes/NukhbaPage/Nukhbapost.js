@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import SocialButton from "../../components/SocialButton";
-import ScrollToTop from "../../components/ScrollToTop";
-import DestnationData from "../../components/DestnationData";
-import styles from "../../styles/Destnationstyle.module.css";
-import Typography from "@mui/material/Typography";
-const Nukhbapost = () => {
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import SocialButton from "../components/SocialButton";
+import ScrollToTop from "../components/ScrollToTop";
+import DestnationData from "../components/DestnationData";
+import styles from "../styles/Destnationstyle.module.css";
+const ProfileDetail = () => {
   const { id } = useParams();
   const [profileInfo, setProfileInfo] = useState(null);
 
@@ -17,7 +16,6 @@ const Nukhbapost = () => {
       .then((data) => setProfileInfo(data))
       .catch((error) => console.error("Error:", error));
   }, [id]);
-  console.log(profileInfo);
 
   if (!profileInfo) {
     return (
@@ -35,23 +33,12 @@ const Nukhbapost = () => {
       </>
     );
   }
-  const formattedDate = new Date(profileInfo.created_at).toLocaleString(
-    "en-US",
-    {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      hour12: true,
-    }
-  );
   return (
     <div>
       <Navbar />
       <div className="mt-16 pt-4">
         <div className={styles.destnation}>
+         
           <DestnationData
             cName={styles.firstDes}
             heading={profileInfo.title}
@@ -66,6 +53,7 @@ const Nukhbapost = () => {
             img1={profileInfo.thirdpic}
             img2={profileInfo.forthpic}
           />
+         
           {profileInfo.video_file && (
              <div class="flex items-center justify-center h-screen">
         <video className="max-w-full max-h-full" controls>
@@ -74,16 +62,10 @@ const Nukhbapost = () => {
         </video>
         </div>
       )}
+          
+        
         </div>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          className="flex justify-center "
-        >
-          created at : {formattedDate}
-        </Typography>
       </div>
-
       <Footer />
       <SocialButton />
       <ScrollToTop />
@@ -91,4 +73,4 @@ const Nukhbapost = () => {
   );
 };
 
-export default Nukhbapost;
+export default ProfileDetail;
